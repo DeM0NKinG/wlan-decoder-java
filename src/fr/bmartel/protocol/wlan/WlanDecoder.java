@@ -38,7 +38,7 @@ import fr.bmartel.utils.RadioTapException;
  */
 public class WlanDecoder implements IWlan802dot11Radiotap {
 
-	public final static boolean DISPLAY_ELEMENT_NOT_DECODED = true;
+	public final static boolean DISPLAY_ELEMENT_NOT_DECODED = false;
 	
 	/**
 	 * radio tap object

@@ -46,13 +46,12 @@ public class TimElement extends WlanElementAbstr implements ITimElement{
 	 */
 	public TimElement(byte[] data) {
 		super(data);
-		dtimCount = data[0] ;
-		dtimPeriod = data[1] ;
-		bitmapControl = data[2] ;
+		dtimCount = data[0];
+		dtimPeriod = data[1];
+		bitmapControl = data[2];
 		partialVirtualBitmap=new byte[data.length-3];
-		for (int i = 3;i<data.length;i++)
-		{
-			partialVirtualBitmap[3-i]=data[i];
+		for (int i = 3; i < data.length; i++) {
+			partialVirtualBitmap[i-3] = data[i];
 		}
 	}
 
