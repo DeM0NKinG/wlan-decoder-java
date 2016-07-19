@@ -4,7 +4,7 @@
 	
 	<property name="project-name" value="wlandecoder"/>
 	
-	<property name="version" value="1.1" />
+	<property name="version" value="1.2" />
 
 	<path id="master-classpath">
 	  <fileset dir="${basedir}/libs">
@@ -14,7 +14,7 @@
 	
 	<target name="compile" description="Compile source">
         <mkdir dir="bin" />
-        <javac srcdir="src" includes="**" destdir="bin"  >
+        <javac srcdir="src" includes="**" destdir="bin" includeantruntime="false" debug="on">
         	<classpath refid="master-classpath"/>
        	</javac>
 		
