@@ -32,7 +32,7 @@ public class SupportedRateElement extends WlanElementAbstr implements ISupported
 	 */
 	public int getMaxRate() {
 		if (dataRate.length > 0) {
-			System.out.println((dataRate[dataRate.length - 1] & 0x7F) * 500);
+			//System.out.println((dataRate[dataRate.length - 1] & 0x7F) * 500);
 			return ((dataRate[dataRate.length - 1] & 0x7F) * 500) / 1000;
 		} else {
 			return -1;
